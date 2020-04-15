@@ -56,6 +56,46 @@ class HomeScreen extends StatelessWidget{
 							),
 							),
 
+
+							Center(
+								child: Text(
+									'Hope you find me someday',
+									style: TextStyle(
+										color: Colors.white,
+										fontSize: 16.0,
+									),
+								),
+							),
+
+							SizedBox(height: 30.0),
+							GestureDetector(
+							onTap: (){
+								print("Button Pressed");
+							},
+							child: Center(
+								child: Container(
+									margin: EdgeInsets.symmetric(horizontal: 50.0),
+									width: size.width,
+									padding: EdgeInsets.symmetric(vertical: 16.0),
+									decoration: BoxDecoration(
+										color: Color(0xffFE2472),
+										borderRadius: BorderRadius.circular(5.0),
+									),
+									child: Center(
+										child: Text(
+										'GET STARTED',
+										style: TextStyle(
+											color: Colors.white,
+											fontSize: 18.0,
+										),
+									),
+									),
+								),		
+							),
+							),
+
+							SizedBox(height: 50.0),
+
 						],
 					),
 
