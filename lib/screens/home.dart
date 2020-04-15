@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'signin.dart';
 
 //widget imports
+import '../widgets/colors.dart';
 import '../widgets/bgfullscreen.dart';
 
 class HomeScreen extends StatelessWidget{
@@ -59,7 +60,7 @@ class HomeScreen extends StatelessWidget{
 										TextSpan(
 											text: 'ME ',
 											style: TextStyle(
-												color: Color(0xffFE2472),
+												color: pink,
 											),
 										),
 
@@ -102,7 +103,8 @@ class HomeScreen extends StatelessWidget{
 									width: size.width,
 									padding: EdgeInsets.symmetric(vertical: 16.0),
 									decoration: BoxDecoration(
-										color: Color(0xffFE2472),
+										//color: Color(0xffFE2472),
+										color: pink,
 										borderRadius: BorderRadius.circular(5.0),
 									),
 									child: Center(

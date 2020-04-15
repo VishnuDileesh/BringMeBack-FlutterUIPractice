@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
+//widgets import
+import '../widgets/colors.dart';
 import '../widgets/bgfullscreen.dart';
+import '../widgets/button.dart';
 
 class SignIn extends StatelessWidget{
 	@override
@@ -44,24 +47,24 @@ class SignIn extends StatelessWidget{
 									decoration: InputDecoration(
 										hintText: "Email",
 										hintStyle: TextStyle(
-											color: Color(0xff888888),
+											color: grey,
 										),
 										
 										enabledBorder: OutlineInputBorder(
 											borderSide: BorderSide(
-												color: Color(0xff888888),
+												color: grey,
 											),
 										),
 
 										focusedBorder: OutlineInputBorder(
 											borderSide: BorderSide(
-												color: Color(0xff888888),
+												color: grey,
 											),
 										),
 
 										focusedErrorBorder: OutlineInputBorder(
 											borderSide: BorderSide(
-												color: Color(0xff888888),
+												color: grey,
 											),
 										),
 
@@ -73,31 +76,31 @@ class SignIn extends StatelessWidget{
 
 								TextField(
 									style: TextStyle(
-										color: Color(0xff888888),
+										color: grey,
 									),
 									keyboardType: TextInputType.emailAddress,
 									obscureText: true,
 									decoration: InputDecoration(
 										hintText: "Password",
 										hintStyle: TextStyle(
-											color: Color(0xff888888),
+											color: grey,
 										),
 										
 										enabledBorder: OutlineInputBorder(
 											borderSide: BorderSide(
-												color: Color(0xff888888),
+												color: grey,
 											),
 										),
 
 										focusedBorder: OutlineInputBorder(
 											borderSide: BorderSide(
-												color: Color(0xff888888),
+												color: grey,
 											),
 										),
 
 										focusedErrorBorder: OutlineInputBorder(
 											borderSide: BorderSide(
-												color: Color(0xff888888),
+												color: grey,
 											),
 										),
 
@@ -114,12 +117,25 @@ class SignIn extends StatelessWidget{
 										child:Text(
 										'Forgot Password',
 										style: TextStyle(
-											color: Color(0xff888888),
+											color: grey,
 										),
 									),
 									),
 								),
 
+								Button(
+									btn_text: 'Sign In',
+									btn_color: pink,
+								),
+
+								Center(
+									child: Text(
+										'--- OR ---',
+										style: TextStyle(
+											
+										),
+									),
+								),
 
 
 

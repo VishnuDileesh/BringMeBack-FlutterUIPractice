@@ -1,0 +1,27 @@
+import 'package:flutter/material.dart';
+
+class Button extends StatelessWidget{
+	@override
+	Widget build(BuildContext context){
+
+		return Container(
+									margin: EdgeInsets.symmetric(horizontal: 50.0),
+									width: size.width,
+									padding: EdgeInsets.symmetric(vertical: 16.0),
+									decoration: BoxDecoration(
+										color: Color(0xffFE2472),
+										borderRadius: BorderRadius.circular(5.0),
+									),
+									child: Center(
+										child: Text(
+										'GET STARTED',
+										style: TextStyle(
+											color: Colors.white,
+											fontSize: 18.0,
+										),
+									),
+									),
+								);		
+	}
+
+}
