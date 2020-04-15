@@ -5,10 +5,7 @@ import '../widgets/colors.dart';
 import '../widgets/bgfullscreen.dart';
 import '../widgets/button.dart';
 
-//screens import
-import 'signup.dart';
-
-class SignIn extends StatelessWidget{
+class SignUp extends StatelessWidget{
 	@override
 	Widget build(BuildContext context){
 		return Material(
@@ -25,7 +22,7 @@ class SignIn extends StatelessWidget{
 						},
 					),
 					title: Text(
-						'Sign In',
+						'Sign Up',
 					),
 					centerTitle: true,
 					backgroundColor: Colors.transparent,
@@ -130,7 +127,7 @@ class SignIn extends StatelessWidget{
 								SizedBox(height: 40.0,),
 
 								ButtonFull(
-									btn_text: 'Sign In',
+									btn_text: 'Sign Up',
 									btn_color: pink,
 								),
 
@@ -206,12 +203,7 @@ class SignIn extends StatelessWidget{
 										SizedBox(width: 3.0),
 
 										InkWell(
-											onTap: (){
-												Navigator.push(
-													context,
-													MaterialPageRoute(builder: (context) => SignUp()),
-												);
-											},
+											onTap: (){},
 											child: Text(
 												'Sign up',
 												style: TextStyle(
