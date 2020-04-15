@@ -36,7 +36,38 @@ class SignIn extends StatelessWidget{
 							child: Column(
 							children: <Widget>[
 
+								TextField(
+									style: TextStyle(
+										color: Color(0xff888888),
+									),
+									keyboardType: TextInputType.emailAddress,
+									decoration: InputDecoration(
+										hintText: "Email",
+										hintStyle: TextStyle(
+											color: Color(0xff888888),
+										),
+										
+										enabledBorder: OutlineInputBorder(
+											borderSide: BorderSide(
+												color: Color(0xff888888),
+											),
+										),
 
+										focusedBorder: OutlineInputBorder(
+											borderSide: BorderSide(
+												color: Color(0xff888888),
+											),
+										),
+
+										focusedErrorBorder: OutlineInputBorder(
+											borderSide: BorderSide(
+												color: Color(0xff888888),
+											),
+										),
+
+
+									),
+								),
 
 							],
 						),

@@ -8,7 +8,7 @@ class BGFullScreen extends StatelessWidget{
 		Size size = MediaQuery.of(context).size;
 
 		return ColorFiltered(
-					colorFilter: ColorFilter.mode(Colors.grey[900].withOpacity(0.4), BlendMode.srcOver),
+					colorFilter: ColorFilter.mode(Colors.grey.shade900.withOpacity(0.7), BlendMode.srcOver),
 					child: Center(
 						child: Image.asset(
 							'assets/images/bg-image.jpg',
