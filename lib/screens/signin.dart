@@ -37,6 +37,7 @@ class SignIn extends StatelessWidget{
 						child: Container(
 							padding: EdgeInsets.symmetric(horizontal: 16.0),
 							child: Column(
+							mainAxisAlignment: MainAxisAlignment.center,
 							children: <Widget>[
 
 								TextField(
@@ -181,6 +182,38 @@ class SignIn extends StatelessWidget{
 											btn_color: Color(0xffDB4A39),
 										),
 										),
+									],
+								),
+
+								SizedBox(height: 60.0),
+
+
+								Row(
+									mainAxisAlignment: MainAxisAlignment.center,
+									children: <Widget>[
+									
+										Text(
+											"Don't have an account?",
+											style: TextStyle(
+												color: grey,
+												fontSize: 16.0,
+											),
+										),
+
+										SizedBox(width: 3.0),
+
+										InkWell(
+											onTap: (){},
+											child: Text(
+												'Sign up',
+												style: TextStyle(
+													color: pink,
+													fontSize: 16.0,
+													decoration: TextDecoration.underline,
+												),
+											),
+										),
+
 									],
 								),
 
