@@ -11,14 +11,30 @@ class HomeScreen extends StatelessWidget{
 			child: Stack(
 				children: <Widget>[
 
+	
 					Center(
 						child: Image.asset(
 							'assets/images/bg-image.jpg',
-							width: size.width,
 							height: size.height,
-							fit: BoxFit.fill,
+							fit: BoxFit.cover,
 						),
 					),
+
+			/*
+
+					Container(
+						decoration: BoxDecoration(
+							image: DecorationImage(
+								image: AssetImage(
+									'assets/images/bg-image.jpg',
+								),
+								fit: BoxFit.fill,
+							),
+						),
+					),
+
+				*/
+
 
 					Column(
 						mainAxisAlignment: MainAxisAlignment.end,
