@@ -20,8 +20,57 @@ class HomeScreen extends StatelessWidget{
 						),
 					),
 
+					Column(
+						mainAxisAlignment: MainAxisAlignment.end,
+						crossAxisAlignment: CrossAxisAlignment.center,
+						children: <Widget>[
+							
+							Center(
+							
+							child: RichText(
+								text: TextSpan(
+									text: 'BRING ',
+									style: TextStyle(
+										color: Colors.white,
+										fontSize: 36.0,
+										fontWeight: FontWeight.bold, 
+									),
+									children: <TextSpan>[
+										TextSpan(
+											text: 'ME ',
+											style: TextStyle(
+												color: Color(0xffFE2472),
+											),
+										),
+
+										TextSpan(
+											text: 'BACK',
+											style: TextStyle(
+												color: Colors.white,
+											),
+										),
+
+
+									],
+								),
+							),
+							),
+
+						],
+					),
+
 				],
 			),
 		);
 	}
 }
+
+
+
+
+
+
+
+
+
+
