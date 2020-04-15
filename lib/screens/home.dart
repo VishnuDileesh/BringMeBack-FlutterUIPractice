@@ -12,13 +12,19 @@ class HomeScreen extends StatelessWidget{
 				children: <Widget>[
 
 	
-					Center(
+					ColorFiltered(
+					colorFilter: ColorFilter.mode(Colors.grey[900].withOpacity(0.4), BlendMode.srcOver),
+					child: Center(
 						child: Image.asset(
 							'assets/images/bg-image.jpg',
 							height: size.height,
 							fit: BoxFit.cover,
 						),
 					),
+					),
+
+
+				
 
 			/*
 
@@ -110,7 +116,7 @@ class HomeScreen extends StatelessWidget{
 							),
 							),
 
-							SizedBox(height: 50.0),
+							SizedBox(height: 40.0),
 
 						],
 					),
