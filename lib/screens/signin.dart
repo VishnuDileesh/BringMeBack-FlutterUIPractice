@@ -10,9 +10,18 @@ class SignIn extends StatelessWidget{
 				extendBodyBehindAppBar: true,
 				backgroundColor: Colors.transparent,
 				appBar: AppBar(
+					leading: IconButton(
+						icon: Icon(
+							Icons.arrow_back,
+						),
+						onPressed: (){
+							Navigator.pop(context);
+						},
+					),
 					title: Text(
 						'Sign In',
 					),
+					centerTitle: true,
 					backgroundColor: Colors.transparent,
 					elevation: 0.0,
 				),

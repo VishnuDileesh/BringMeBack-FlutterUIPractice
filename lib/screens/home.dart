@@ -91,7 +91,7 @@ class HomeScreen extends StatelessWidget{
 							GestureDetector(
 							onTap: (){
 								print("Button Pressed");
-								Navigator.pushReplacement(
+								Navigator.push(
 									context,
 									MaterialPageRoute(builder: (context) => SignIn()),
 								);
