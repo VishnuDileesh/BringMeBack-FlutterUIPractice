@@ -1,4 +1,11 @@
+//package imports
 import 'package:flutter/material.dart';
+
+//screen imports
+import 'signin.dart';
+
+//widget imports
+import '../widgets/bgfullscreen.dart';
 
 class HomeScreen extends StatelessWidget{
 	@override
@@ -11,17 +18,8 @@ class HomeScreen extends StatelessWidget{
 			child: Stack(
 				children: <Widget>[
 
-	
-					ColorFiltered(
-					colorFilter: ColorFilter.mode(Colors.grey[900].withOpacity(0.4), BlendMode.srcOver),
-					child: Center(
-						child: Image.asset(
-							'assets/images/bg-image.jpg',
-							height: size.height,
-							fit: BoxFit.cover,
-						),
-					),
-					),
+
+					BGFullScreen(),
 
 
 				
@@ -93,6 +91,10 @@ class HomeScreen extends StatelessWidget{
 							GestureDetector(
 							onTap: (){
 								print("Button Pressed");
+								Navigator.pushReplacement(
+									context,
+									MaterialPageRoute(builder: (context) => SignIn()),
+								);
 							},
 							child: Center(
 								child: Container(
