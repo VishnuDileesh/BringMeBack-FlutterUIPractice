@@ -123,20 +123,66 @@ class SignIn extends StatelessWidget{
 									),
 								),
 
-								Button(
+								SizedBox(height: 40.0,),
+
+								ButtonFull(
 									btn_text: 'Sign In',
 									btn_color: pink,
 								),
 
-								Center(
-									child: Text(
-										'--- OR ---',
-										style: TextStyle(
-											
+								SizedBox(height: 32.0),
+
+								Row(
+									mainAxisAlignment: MainAxisAlignment.center,
+									children: <Widget>[
+
+										Container(
+											margin: EdgeInsets.only(left: 10.0, right: 10.0),
+											color: grey,
+											height: 1,
+											width: 30.0,
 										),
-									),
+
+										Text(
+											'OR',
+											style: TextStyle(
+												color: grey,
+												fontSize: 16.0,
+											),
+										),
+
+
+										Container(
+											margin: EdgeInsets.only(left: 10.0, right: 10.0),
+											color: grey,
+											height: 1,
+											width: 30.0,
+										),
+
+									],
 								),
 
+								
+								Row(
+									children: <Widget>[
+										Expanded(
+										child: Button(
+											btn_text: 'Facebook',
+											btn_color: Color(0xff3B5998),
+										),
+										),
+
+										SizedBox(width: 10.0),
+
+
+										Expanded(
+										child: Button(
+											btn_text: 'Google+',
+											btn_color: Color(0xffDB4A39),
+										),
+										),
+									],
+								),
 
 
 							],
