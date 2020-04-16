@@ -7,6 +7,7 @@ import '../widgets/button.dart';
 
 //screens import
 import 'signup.dart';
+import 'mainscreen.dart';
 
 class SignIn extends StatelessWidget{
 	@override
@@ -136,6 +137,12 @@ class SignIn extends StatelessWidget{
 							    	ButtonFull(
 							    		btn_text: 'Sign In',
 							    		btn_color: pink,
+											btn_tap: (){
+												Navigator.push(
+														context,
+														MaterialPageRoute(builder: (context) => MainScreen())
+												);
+											},
 							    	),
 
 							    	SizedBox(height: 32.0),

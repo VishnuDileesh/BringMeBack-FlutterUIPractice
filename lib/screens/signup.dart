@@ -7,8 +7,18 @@ import '../widgets/button.dart';
 
 //screens import
 import 'signin.dart';
+import 'mainscreen.dart';
 
-class SignUp extends StatelessWidget {
+class SignUp extends StatefulWidget{
+	@override
+	_SignUpState createState() => _SignUpState();
+}
+
+class _SignUpState extends State<SignUp> {
+
+	String _value;
+	List<String> options = <String>['Volunteer', 'Donor'];
+
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -56,17 +66,21 @@ class SignUp extends StatelessWidget {
                                 ),
                                 child: DropdownButtonHideUnderline(
                                   child: DropdownButton<String>(
+
                                       items: [
                                         DropdownMenuItem<String>(
-                                          value: 'Volunteer',
+                                          value: 'one',
                                           child: Center(
                                               child: Text('Volunteer',
                                                   style: TextStyle(
+																										inherit: false,
                                                     color: grey,
+																										decorationColor: Colors.red,
                                                   ))),
                                         ),
 																		DropdownMenuItem<String>(
-                                          value: 'Donor',
+                                          value: 'two',
+																					
                                           child: Center(
                                               child: Text('Donor',
                                                   style: TextStyle(
@@ -79,8 +93,12 @@ class SignUp extends StatelessWidget {
                                           style: TextStyle(
                                             color: grey,
                                           )),
-                                      onChanged: (_value) {
+																			value: _value,
+                                      onChanged: (String value) {
                                         print(_value);
+																				setState((){
+																					_value = value;
+																				});
                                       }),
                                 ),
                               ),
@@ -177,6 +195,12 @@ class SignUp extends StatelessWidget {
                         ButtonFull(
                           btn_text: 'Sign Up',
                           btn_color: pink,
+													btn_tap: (){
+														Navigator.push(
+																context,
+																MaterialPageRoute(builder: (context) => MainScreen())
+														);
+													},
                         ),
                         SizedBox(height: 140.0),
                         Row(
