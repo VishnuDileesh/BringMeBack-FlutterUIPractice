@@ -196,9 +196,10 @@ class _SignUpState extends State<SignUp> {
                           btn_text: 'Sign Up',
                           btn_color: pink,
 													btn_tap: (){
-														Navigator.push(
+														Navigator.pushAndRemoveUntil(
 																context,
-																MaterialPageRoute(builder: (context) => MainScreen())
+																MaterialPageRoute(builder: (context) => MainScreen()),
+																(Route<dynamic> route) => false,
 														);
 													},
                         ),
