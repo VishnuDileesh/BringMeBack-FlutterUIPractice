@@ -31,6 +31,7 @@ class SignIn extends StatelessWidget{
 					backgroundColor: Colors.transparent,
 					elevation: 0.0,
 				),
+				resizeToAvoidBottomInset: false,
 				body: Stack(
 				children: <Widget>[
 					
@@ -165,6 +166,8 @@ class SignIn extends StatelessWidget{
 
 									],
 								),
+
+								SizedBox(height: 32.0),
 
 								
 								Row(
