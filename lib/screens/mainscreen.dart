@@ -55,8 +55,8 @@ class MainScreen extends StatelessWidget{
 										    		decoration: BoxDecoration(
 										    				color: pink,
 										    				borderRadius: BorderRadius.only(
-										    						bottomLeft: Radius.circular(10.0),
-										    						bottomRight: Radius.circular(10.0),
+										    						bottomLeft: Radius.circular(12.0),
+										    						bottomRight: Radius.circular(12.0),
 										    				),
 										    		),
 										    		child: Column(
@@ -124,8 +124,133 @@ class MainScreen extends StatelessWidget{
 								Expanded(
 										flex: 7,
 										child: Container(
+												padding: EdgeInsets.only(left: 26.0),
 												decoration: BoxDecoration(
 														color: lightblack,
+												),
+												child: Column(
+														children: <Widget>[
+
+															SizedBox(height: 24.0),
+
+															InkWell(
+																onTap: (){},
+															  child: Row(
+															  		children: <Widget>[
+															  			Icon(
+															  					Icons.child_care,
+															  					color: pink,
+															  			),
+
+															  			SizedBox(width: 16.0),
+
+															  			Text(
+															  					'Child Panel',
+															  					style: TextStyle(
+															  							color: white,
+															  					),
+															  			),
+															  		],
+															  ),
+															),
+
+															SizedBox(height: 24.0),
+
+
+																InkWell(
+																	onTap: (){},
+																  child: Row(
+																  	children: <Widget>[
+																  		Icon(
+																  				Icons.add_circle_outline,
+																  				color: pink,
+																  		),
+
+																  		SizedBox(width: 16.0),
+
+																  		Text(
+																  				'Add Child',
+																  				style: TextStyle(
+																  						color: white,
+																  				),
+																  		),
+																  	],
+															),
+																),
+															
+															SizedBox(height: 24.0),
+
+
+															InkWell(
+																onTap: (){},
+															  child: Row(
+															  		children: <Widget>[
+															  			Icon(
+															  					Icons.help_outline,
+															  					color: pink,
+															  			),
+
+															  			SizedBox(width: 16.0),
+
+															  			Text(
+															  					'Orphanage Panel',
+															  					style: TextStyle(
+															  							color: white,
+															  					),
+															  			),
+															  		],
+															  ),
+															),
+	
+															SizedBox(height: 24.0),
+
+
+															InkWell(
+																onTap: (){},
+															  child: Row(
+															  		children: <Widget>[
+															  			Icon(
+															  					Icons.settings,
+															  					color: pink,
+															  			),
+
+															  			SizedBox(width: 16.0),
+
+															  			Text(
+															  					'User Profile',
+															  					style: TextStyle(
+															  							color: white,
+															  					),
+															  			),
+															  		],
+															  ),
+															),
+
+															SizedBox(height: 24.0),
+
+
+															InkWell(
+																onTap: (){},
+															  child: Row(
+															  		children: <Widget>[
+															  			Icon(
+															  					Icons.power_input,
+															  					color: pink,
+															  			),
+
+															  			SizedBox(width: 16.0),
+
+															  			Text(
+															  					'Logout',
+															  					style: TextStyle(
+															  							color: white,
+															  					),
+															  			),
+															  		],
+															  ),
+															),
+	
+														],
 												),
 										),
 								),

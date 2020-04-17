@@ -87,7 +87,6 @@ class SignIn extends StatelessWidget{
 							    		style: TextStyle(
 							    			color: grey,
 							    		),
-							    		keyboardType: TextInputType.emailAddress,
 							    		obscureText: true,
 							    		decoration: InputDecoration(
 							    			hintText: "Password",
@@ -135,7 +134,7 @@ class SignIn extends StatelessWidget{
 							    	SizedBox(height: 40.0,),
 
 							    	ButtonFull(
-							    		btn_text: 'Sign In',
+							    		btn_text: 'SIGN IN',
 							    		btn_color: pink,
 											btn_tap: (){
 												Navigator.pushAndRemoveUntil(
