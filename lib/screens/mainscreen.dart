@@ -4,11 +4,14 @@ import 'package:carousel_pro/carousel_pro.dart';
 import '../widgets/colors.dart';
 import '../widgets/profile_card.dart';
 
+import 'addchild.dart';
+
 
 class MainScreen extends StatelessWidget{
 	@override
 	Widget build(BuildContext context){
 		return Scaffold(
+				extendBodyBehindAppBar: true,
 				appBar: AppBar(
 						title: Text('Home'),
 						centerTitle: true,
@@ -22,9 +25,131 @@ class MainScreen extends StatelessWidget{
 							),
 						],
 				),
+				floatingActionButton: FloatingActionButton(
+						child: Icon(Icons.add),
+						backgroundColor: pink,
+						onPressed: (){
+							Navigator.push(
+									context,
+									MaterialPageRoute(builder: (context) => AddChild()),
+							);
+						},
+				),
 				backgroundColor: black,
 				drawer: Drawer(
-					
+						child: Column(
+								children: <Widget>[
+
+								Expanded(
+										flex: 3,
+										child: Stack(
+										  children: <Widget>[
+												Container(
+													decoration: BoxDecoration(
+														color: lightblack,
+													),
+												),
+
+										    Container(
+										    		padding: EdgeInsets.all(16.0),
+										    		decoration: BoxDecoration(
+										    				color: pink,
+										    				borderRadius: BorderRadius.only(
+										    						bottomLeft: Radius.circular(10.0),
+										    						bottomRight: Radius.circular(10.0),
+										    				),
+										    		),
+										    		child: Column(
+										    				mainAxisAlignment: MainAxisAlignment.center,
+										    				children: <Widget>[
+										    					Align(
+										    							alignment: Alignment.topRight,
+										    							child: Icon(
+										    									Icons.menu,
+										    									color: white,
+										    							),
+										    					),
+
+										    					Row(
+										    							mainAxisAlignment: MainAxisAlignment.spaceAround,
+										    							children: <Widget>[
+										    								CircleAvatar(
+										    										radius: 50.0,
+										    										backgroundColor: white,
+										    										child: CircleAvatar(
+										    												radius: 47.0,
+										    												backgroundImage: AssetImage(
+										    														'assets/images/profile.jpg',
+										    												),
+										    										),
+										    								),
+
+										    								Column(
+										    										mainAxisAlignment: MainAxisAlignment.center,
+										    										crossAxisAlignment: CrossAxisAlignment.start,
+										    										children: <Widget>[
+
+										    								Text(
+										    										'Jessica Martin',
+										    										style: TextStyle(
+										    												color: white,
+										    												fontWeight: FontWeight.bold,
+										    												fontSize: 16.0,
+										    										),
+										    								),
+
+
+										    								Text(
+										    										'Social Entrepreneur',
+										    										style: TextStyle(
+										    												color: white,
+										    												fontSize: 16.0,
+										    										),
+										    								),
+
+										    										],
+										    								),
+	
+
+										    							],
+										    					),
+										    				],
+										    		),
+										    ),
+										  ],
+										),
+								),
+
+								
+								Expanded(
+										flex: 7,
+										child: Container(
+												decoration: BoxDecoration(
+														color: lightblack,
+												),
+										),
+								),
+
+
+									/*
+									UserAccountsDrawerHeader(
+											decoration: BoxDecoration(
+													color: pink,
+											),
+											accountName: Text('Jessica Martin'),
+											accountEmail: Text('Social Entrepreneur'),
+											currentAccountPicture: CircleAvatar(
+												radius: 50.0,
+												backgroundColor: white,
+											  child: CircleAvatar(
+														radius: 33.0,
+											  		backgroundImage: AssetImage('assets/images/profile.jpg'),
+											  ),
+											),
+									),
+									*/
+								],
+						),
 				),
 				body: SafeArea(
 						child: Column(
@@ -60,6 +185,7 @@ class MainScreen extends StatelessWidget{
 									  		crossAxisCount: 2,
 									  		crossAxisSpacing: 20.0,
 									  		mainAxisSpacing: 16.0,
+												childAspectRatio: 1.1,
 									  		children: <Widget>[
 
 													ProfileCard(
