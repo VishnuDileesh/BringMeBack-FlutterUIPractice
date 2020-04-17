@@ -64,8 +64,26 @@ class MainScreen extends StatelessWidget{
 
 													ProfileCard(
 														profile_image: 'assets/images/kid-profile-2.jpg',
-														profile_name: 'Rahul',
-														profile_age: '5',
+														profile_name: 'Vijay',
+														profile_age: '3',
+													),
+
+													ProfileCard(
+															profile_image: 'assets/images/kid-profile-1.jpg',
+															profile_name: 'Chetan',
+															profile_age: '7',
+													),
+
+													ProfileCard(
+															profile_image: 'assets/images/kid-profile-3.jpg',
+															profile_name: 'Priya',
+															profile_age: '5',
+													),
+
+													ProfileCard(
+															profile_image: 'assets/images/kid-profile-4.jpg',
+															profile_name: 'Amit',
+															profile_age: '6',
 													),
 
 
