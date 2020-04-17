@@ -49,6 +49,75 @@ class MainScreen extends StatelessWidget{
 												overlayShadowColors: black,
 									  ),
 									),
+
+									SizedBox(height: 24.0),
+
+									Expanded(
+									  child: GridView.count(
+									  		primary: false,
+									  		crossAxisCount: 2,
+									  		crossAxisSpacing: 16,
+									  		mainAxisSpacing: 10,
+									  		children: <Widget>[
+									  			Container(
+									  					decoration: BoxDecoration(
+																	border: Border.all(
+																			color: grey,
+																	),
+																	borderRadius: BorderRadius.circular(5.0),
+									  							image: DecorationImage(
+									  									image: AssetImage(
+									  											'assets/images/kid-profile-2.jpg',
+									  											),
+									  									fit: BoxFit.cover,
+									  							),
+									  					),
+									  					child: Row(
+																	mainAxisAlignment: MainAxisAlignment.spaceBetween,
+																	crossAxisAlignment: CrossAxisAlignment.end,
+									  							children: <Widget>[
+									  								Padding(
+									  								  padding: const EdgeInsets.all(8.0),
+									  								  child: Text(
+																				'Vijay',
+																				style: TextStyle(
+																						color: white,
+																				),
+																				),
+									  								),
+									  								Padding(
+									  								  padding: const EdgeInsets.all(8.0),
+									  								  child: Text(
+																				'Age: 5',
+																				style: TextStyle(
+																						color: white,
+																				),
+																				),
+									  								),
+									  							],
+									  					), 
+									  			),
+
+									  			Container(
+									  					decoration: BoxDecoration(
+									  							image: DecorationImage(
+									  									image: AssetImage(
+									  											'assets/images/kid-profile-1.jpg',
+									  											),
+									  									fit: BoxFit.cover,
+									  							),
+									  					),
+									  					child: Row(
+									  							children: <Widget>[
+									  								Text('Vijay'),
+									  								Text('Age: 5'),
+									  							],
+									  					), 
+									  			),
+
+									  		],
+									  ),
+									),
 								],
 						),
 				),
