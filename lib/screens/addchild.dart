@@ -6,7 +6,6 @@ import '../widgets/bgfullscreen.dart';
 import '../widgets/button.dart';
 
 //screens import
-import 'signin.dart';
 import 'mainscreen.dart';
 
 class AddChild extends StatefulWidget{
@@ -53,6 +52,49 @@ class _AddChildState extends State<AddChild> {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
+
+
+											
+												Stack(
+														children: <Widget>[
+															Container(
+																	width: 100.0,
+																	height: 100.0,
+																	decoration: BoxDecoration(
+																			shape: BoxShape.circle,
+																			border: Border.all(
+																					color: white,
+																					width: 2.0,
+																			)
+																	),
+																	child: ClipOval(
+																			child: Image.asset(
+																					'assets/images/user_profile.png'
+																			),
+																	),
+															),
+
+															Positioned(
+																	bottom: 0,
+																	right: 0,
+																	child: Container(
+																			padding: EdgeInsets.all(6.0),
+																			decoration: BoxDecoration(
+																					shape: BoxShape.circle,
+																					color: pink,
+																			),
+																	  child: Icon(
+																	  		Icons.photo_camera,
+																	  		color: white,
+																	  ),
+																	),
+															),
+
+
+														],
+												),
+
+												SizedBox(height: 40.0),
 
                         TextField(
                           style: TextStyle(
