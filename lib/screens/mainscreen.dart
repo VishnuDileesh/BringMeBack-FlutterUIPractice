@@ -5,6 +5,7 @@ import '../widgets/colors.dart';
 import '../widgets/profile_card.dart';
 
 import 'addchild.dart';
+import 'childprofile.dart';
 
 
 class MainScreen extends StatelessWidget{
@@ -256,23 +257,6 @@ class MainScreen extends StatelessWidget{
 								),
 
 
-									/*
-									UserAccountsDrawerHeader(
-											decoration: BoxDecoration(
-													color: pink,
-											),
-											accountName: Text('Jessica Martin'),
-											accountEmail: Text('Social Entrepreneur'),
-											currentAccountPicture: CircleAvatar(
-												radius: 50.0,
-												backgroundColor: white,
-											  child: CircleAvatar(
-														radius: 33.0,
-											  		backgroundImage: AssetImage('assets/images/profile.jpg'),
-											  ),
-											),
-									),
-									*/
 								],
 						),
 				),
@@ -313,10 +297,18 @@ class MainScreen extends StatelessWidget{
 												childAspectRatio: 1.1,
 									  		children: <Widget>[
 
-													ProfileCard(
-														profile_image: 'assets/images/kid-profile-2.jpg',
-														profile_name: 'Vijay',
-														profile_age: '3',
+													InkWell(
+														onTap: (){
+															Navigator.push(
+																context,
+																MaterialPageRoute(builder: (context) => ChildProfile(),),
+															);
+														},
+													  child: ProfileCard(
+													  	profile_image: 'assets/images/kid-profile-2.jpg',
+													  	profile_name: 'Vijay',
+													  	profile_age: '3',
+													  ),
 													),
 
 													ProfileCard(
